@@ -1,0 +1,64 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test-typescript:
+    name: TypeScript Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        id: setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: yarn
+
+      - name: Install Dependencies
+        id: yarn-ci
+        run: yarn install --frozen-lockfile
+
+      - name: Check Format
+        id: yarn-format-check
+        run: yarn format:check
+
+      - name: Lint
+        id: yarn-lint
+        run: yarn lint
+
+      - name: Test
+        id: yarn-ci-test
+        run: yarn ci-test
+
+  test-action:
+    name: GitHub Actions Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Test Local Action
+        id: test-action
+        uses: ./
+        with:
+          start: yarn fake-servers
+          wait-on:
+            'http://localhost:4001, http://localhost:4002, http://localhost:4003'
+          wait-on-timeout: 10
+          command: yarn lint
