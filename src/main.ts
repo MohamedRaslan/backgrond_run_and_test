@@ -68,6 +68,8 @@ const getInputBool = (name: string, defaultValue = false): boolean => {
  */
 async function runTest(): Promise<(number | undefined)[] | undefined> {
   let userCommand
+  const shouldRun = getInputBool('command-if', true)
+
   if (isWindows()) {
     // allow custom Windows command command
     userCommand = core.getInput('command-windows') || core.getInput('command')
@@ -75,6 +77,12 @@ async function runTest(): Promise<(number | undefined)[] | undefined> {
     userCommand = core.getInput('command')
   }
   if (!userCommand) {
+    debug('No command found')
+    return
+  }
+
+  if (!shouldRun) {
+    console.log(`skip running the commands`)
     return
   }
   // allow commands to be separated using commas or newlines
@@ -99,6 +107,7 @@ const startServersMaybe = async (): Promise<
   (number | undefined)[] | undefined
 > => {
   let userStartCommand
+  const shouldStart = getInputBool('start-if', true)
 
   if (isWindows()) {
     // allow custom Windows start command
@@ -111,11 +120,17 @@ const startServersMaybe = async (): Promise<
     return
   }
 
+  if (!shouldStart) {
+    console.log(`skip running the start commands`)
+    return
+  }
+
   // allow commands to be separated using commas or newlines
   const separateStartCommands = userStartCommand
     .split(/,|\n/)
     .map(s => s.trim())
     .filter(Boolean)
+
   debug(
     `Separated ${
       separateStartCommands.length

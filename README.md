@@ -187,6 +187,7 @@ follow
 ### Conditional wait
 
 You can also wait or not based on condtion using the `wait-if`
+
 :information_source: Note: By default it will wait
 
 ```yaml
@@ -209,6 +210,41 @@ jobs:
             contains( github.base_ref , 'local' ) || ${{ failure() &&
             steps.lint.outcome == 'failure' }}
           command: yarn run test:apps
+```
+
+### Conditional run comands
+
+Similarly, You can also wait or not based on condition using the `start-if` ,
+and `command-if`
+
+:information_source: Note: By default it will run the commands
+
+```yaml
+name: Run Tests
+on: [push]
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Lint the app
+        id: lint
+        run: yarn run lint
+      - name: Run E2E Tests
+        uses: MohamedRaslan/backgrond_run_and_test@v1
+        with:
+          start: yarn run start:apps:server
+          start-if:
+            contains( github.base_ref , 'local' ) || ${{ failure() &&
+            steps.lint.outcome == 'failure' }}
+          wait-if:
+            contains( github.base_ref , 'local' ) || ${{ failure() &&
+            steps.lint.outcome == 'failure' }}
+          command: yarn run test:apps
+          command-if:
+            contains( github.base_ref , 'local' ) || ${{ failure() &&
+            steps.lint.outcome == 'failure' }}
 ```
 
 ## :see_no_evil: Issues

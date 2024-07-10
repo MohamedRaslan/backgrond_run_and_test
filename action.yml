@@ -17,11 +17,19 @@ inputs:
   command-windows:
     description: 'Main command to run on Windows'
     required: false
+  command-if:
+    description:
+      'Conditionally run commands of the "command" or "command-window" option'
+    required: false
   start:
     description: 'Command for starting local server in the background'
     required: false
   start-windows:
     description: 'A different start command on Windows'
+    required: false
+  start-if:
+    description:
+      'Conditionally run commands of the "start" or "start-window" option'
     required: false
   wait-on:
     description: 'Local server URL to wait for'
@@ -32,6 +40,7 @@ inputs:
   wait-if:
     description: 'Conditionally wait on the resources if true'
     required: false
+
   cwd:
     description: 'Current working directory'
     required: false
