@@ -1,8 +1,7 @@
 name: 'Background Run & Test'
 description:
-  'Spin up a server in the background for tests, or do some background works
-  while testing, conditionally wait for the server to be available then run your
-  tests'
+  'Spin up a background server, and conditionally wait for it to be available
+  before running your tests'
 author: 'Mohamed Raslan'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
