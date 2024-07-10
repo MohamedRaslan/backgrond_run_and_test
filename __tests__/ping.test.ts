@@ -47,6 +47,6 @@ describe('Ping urls', () => {
 
     const timeout = 500 // 1sec
 
-    await expect(ping(urls, timeout, 404, true, false)).resolves.not.toThrow()
+    await expect(ping(urls, timeout, 200, true, false)).resolves.not.toThrow()
   })
 })
