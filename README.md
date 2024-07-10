@@ -1,8 +1,17 @@
 # Background Run & Test GitHub Action
 
-[![Lint Codebase](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml)[![Dependabot Updates](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/dependabot/dependabot-updates)[![Continuous Integration](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/ci.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/ci.yml)[![Check Transpiled JavaScript](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/check-dist.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/check-dist.yml)[![CodeQL](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/codeql-analysis.yml)[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
+[![GitHub stars](https://img.shields.io/github/stars/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/network)
+[![GitHub issues](https://img.shields.io/github/issues/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/issues)
+[![GitHub Release Date](https://img.shields.io/github/release-date/mohamedraslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/releases)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mohamedraslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test)
 
-[![GitHub stars](https://img.shields.io/github/stars/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/stargazers)[![GitHub forks](https://img.shields.io/github/forks/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/network)[![GitHub issues](https://img.shields.io/github/issues/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/issues)[![GitHub Release Date](https://img.shields.io/github/release-date/mohamedraslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/releases)[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mohamedraslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test)
+[![Lint Codebase](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml)
+[![Dependabot Updates](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/dependabot/dependabot-updates)
+[![Continuous Integration](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/ci.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/ci.yml)
+[![Check Transpiled JavaScript](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/check-dist.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/check-dist.yml)
+[![CodeQL](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/codeql-analysis.yml)
+[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
 GitHub Action to run a commands (e.g. a test) while also running another
 commands (e.g. a server) in the background, And you could conditional wait for
@@ -216,7 +225,7 @@ Contributions are very welcome :heart:.
 
 - **[wait-on :heart_eyes:](https://github.com/jeffbski/wait-on)** by
   **[Jeff Barczewski](https://github.com/jeffbski)**
-- **[Cypress-io/Github Action :heart_eyes:](https://github.com/cypress-io/github-action)**
+- **[Cypress-io/GitHub Action :heart_eyes:](https://github.com/cypress-io/github-action)**
 - **[Background-Server-Action :heart_eyes:](https://github.com/MohamedRaslan/backgrond_run_and_test)**
   by **[Bernhard Wittmann](https://github.com/BerniWittmann)**
 - **[GitHub Docs - Createing Actions](https://docs.github.com/en/actions/creating-actions)**
