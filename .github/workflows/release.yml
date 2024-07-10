@@ -31,3 +31,55 @@ jobs:
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  sync-branches:
+    name: 🔉 Syncing branches
+    runs-on: ubuntu-latest
+    needs: release
+    timeout-minutes: 5
+    steps:
+      - run:
+          echo "🎉 The job was automatically triggered by a ${{
+          github.event_name }} event."
+      - run:
+          echo "🐧 This job is now running on a ${{ runner.os }} server hosted
+          by GitHub."
+      - run:
+          echo "🔎 The name of your branch is ${{ github.ref }} and your
+          repository is ${{ github.repository }}."
+
+      - name: Check out the repository code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_GITHUB_ACTION_MARKETPLACE }}
+
+      - name: Configure git
+        run: |
+          git config --global user.name 'MohamedRaslan'
+          git config --global user.email 'mohamedraslang@gmail.com'
+
+      - run:
+          echo "💡 The ${{ github.repository }} repository has been cloned to
+          the runner."
+      - run:
+          echo "🖥️ The workflow is now ready to start syncing the branches of
+          the ${{ github.repository }} code."
+
+      - name: Make it a complete repository
+        run: |
+          git config --global user.name 'MohamedRaslan'
+          git config --global user.email 'mohamedraslang@gmail.com'
+          git fetch --unshallow
+
+      - name: Syncing the "main" to "v1"
+        run: |
+          git checkout v1
+          git pull
+          git merge --no-ff main -m "Auto-merge main back to v1"
+
+      - name: Push changes to the " v1" origin
+        if: contains( github.ref , 'main' )
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT_GITHUB_ACTION_MARKETPLACE }}
+          branch: v1
