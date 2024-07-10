@@ -61756,7 +61756,8 @@ const debug = src_default()('backgrond_run_and_test');
  * A small utility for checking when resources responds,
  * it uses the wait-on ( https://www.npmjs.com/package/wait-on )uder the under
  **/
-const ping = async (resource, timeout, expectedStatus = 200, isInsecure = true, isLogging = true) => {
+const ping = async (resource, timeout = 10000, // wait for 10sec
+expectedStatus = 200, isInsecure = true, isLogging = true) => {
     const validateStatus = expectedStatus !== 200
         ? (status) => status === expectedStatus
         : (status) => (status >= 200 && status < 300) || status === 304;

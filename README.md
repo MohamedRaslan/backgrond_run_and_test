@@ -8,6 +8,8 @@
 
 [![CodeQL](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/codeql-analysis.yml)
 
+[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
+
 [![GitHub stars](https://img.shields.io/github/stars/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/network)
 [![GitHub issues](https://img.shields.io/github/issues/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/issues)
