@@ -15,5 +15,10 @@
     "newLine": "lf",
     "resolveJsonModule": true
   },
-  "exclude": ["./dist", "./node_modules", "./__tests__", "./coverage"]
+  "exclude": [
+    "./dist",
+    "./node_modules",
+    "./__tests__",
+    "./coverage"
+  ]
 }
