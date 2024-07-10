@@ -5,7 +5,7 @@ const debug = Debug('backgrond_run_and_test')
 /**
  * A small utility for checking when resources responds,
  * it uses the wait-on ( https://www.npmjs.com/package/wait-on )uder the under
-**/
+ **/
 export const ping = async (
   resource: string | string[],
   timeout: number,

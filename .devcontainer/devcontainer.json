@@ -2,16 +2,10 @@
   "name": "GitHub Actions (TypeScript)",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
   "postCreateCommand": "yarn install",
-  "forwardPorts": [
-    4001,
-    4002,
-    4003
-  ],
+  "forwardPorts": [4001, 4002, 4003],
   "customizations": {
     "codespaces": {
-      "openFiles": [
-        "README.md"
-      ]
+      "openFiles": ["README.md"]
     },
     "vscode": {
       "extensions": [
