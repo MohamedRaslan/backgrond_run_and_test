@@ -6,7 +6,6 @@ MD004:
 MD013:
   line_length: 120
 
-
 # Ordered list item prefix
 MD029:
   style: one
