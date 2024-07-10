@@ -8,7 +8,7 @@ import { expect } from '@jest/globals'
 describe('Ping urls', () => {
   it('Try to ping available urls', async () => {
     const urls = ['https://atomica.ai', 'https://auth.courier.atomica.ai']
-    const timeout = 1000 // 1sec
+    const timeout = 2000 // 2sec
 
     await expect(ping(urls, timeout)).resolves.not.toThrow()
   })
@@ -38,14 +38,14 @@ describe('Ping urls', () => {
   it('Try to ping available urls with 200 status code, and not secure', async () => {
     const urls = ['https://atomica.ai', 'https://auth.courier.atomica.ai']
 
-    const timeout = 1000 // 1sec
+    const timeout = 2000 // 2sec
 
     await expect(ping(urls, timeout, 200, false)).resolves.not.toThrow()
   })
   it('Try to ping available url with 200 status code,scure, no logs', async () => {
     const urls = ['https://atomica.ai']
 
-    const timeout = 1000 // 1sec
+    const timeout = 2000 // 2sec
 
     await expect(ping(urls, timeout, 200, true, false)).resolves.not.toThrow()
   })
