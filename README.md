@@ -187,6 +187,7 @@ follow
 ### Conditional wait
 
 You can also wait or not based on condtion using the `wait-if`
+
 :information_source: Note: By default it will wait
 
 ```yaml
