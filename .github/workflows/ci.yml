@@ -60,6 +60,10 @@ jobs:
           node-version-file: .node-version
           cache: yarn
 
+      - name: Install Dependencies
+        id: yarn-ci
+        run: yarn install --frozen-lockfile
+
       - name: Test Local Action
         id: test-action
         uses: ./
