@@ -215,7 +215,9 @@ jobs:
 ### Conditional run comands
 
 Similarly, You can also wait or not based on condition using the `start-if` ,
-and `command-if` :information_source: Note: By default it will run the commands
+and `command-if`
+
+:information_source: Note: By default it will run the commands
 
 ```yaml
 name: Run Tests
