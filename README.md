@@ -1,3 +1,5 @@
+# Background Run & Test GitHub Action
+
 [![Lint Codebase](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml)
 
 [![Dependabot Updates](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/dependabot/dependabot-updates)
@@ -16,12 +18,10 @@
 [![GitHub Release Date](https://img.shields.io/github/release-date/mohamedraslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/releases)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mohamedraslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test)
 
-# Background Run & Test GitHub Action
-
 GitHub Action to run a commands (e.g. a test) while also running another
 commands (e.g. a server) in the background, And you could conditional wait for
 the background resources to be available the `wait-on` use the
-**[wait-on](https://www.yarnjs.com/package/wait-on)** yarn package under the
+**[wait-on](https://www.yarnjs.com/package/wait-on)** Yarn package under the
 hood so most of the `waiton` functionality should be accepted.
 
 > :information_source: **Notice**
@@ -41,14 +41,14 @@ hood so most of the `waiton` functionality should be accepted.
 - Optionally wait for resources before running your test, your resources could
   be (files, ports, sockets, or http(s) resources to become available (or not
   available using reverse mode)) as it use the
-  **[wait-on](https://www.yarnjs.com/package/wait-on)** yarn package under the
+  **[wait-on](https://www.yarnjs.com/package/wait-on)** Yarn package under the
   hood
 - Conditional wait using the `wait-if` option
 - You can run multiple commands at once
 
 ### Usage
 
-Run a node js server in the background while executing tests
+Run a Nodejs server in the background while executing tests
 
 ```yaml
 name: Run Tests
@@ -134,7 +134,7 @@ jobs:
 ### Wait for server
 
 If you are starting a local server and it takes a while to start, you can add a
-parameter `wait-on` and pass url to wait for the server to respond.
+parameter `wait-on` and pass URL to wait for the server to respond.
 
 ```yaml
 name: Run Tests
@@ -166,7 +166,7 @@ seconds using `wait-on-timeout`.
       command: yarn run test:apps
 ```
 
-You can wait for multiple URLs to respond by separating urls with a comma
+You can wait for multiple URLs to respond by separating URLs with a comma
 
 ```yaml
 - uses: MohamedRaslan/backgrond_run_and_test@v1
@@ -228,10 +228,10 @@ Contributions are very welcome :heart:.
 
 ## :nerd_face: Credits & Resources
 
-- **[Wait-on :heart_eyes:](https://github.com/jeffbski/wait-on)** by
+- **[wait-on :heart_eyes:](https://github.com/jeffbski/wait-on)** by
   **[Jeff Barczewski](https://github.com/jeffbski)**
-- **[Cypress-io/Github-Action :heart_eyes:](https://github.com/cypress-io/github-action)**
-- **[Background-Server-Action :heart_eyes:](https://github.com/MohamedRaslan/backgrond_run_and_test)**
+- **[cypress-io/github-action :heart_eyes:](https://github.com/cypress-io/github-action)**
+- **[background-server-action :heart_eyes:](https://github.com/MohamedRaslan/backgrond_run_and_test)**
   by **[Bernhard Wittmann](https://github.com/BerniWittmann)**
 - **[GitHub Docs - Createing Actions](https://docs.github.com/en/actions/creating-actions)**
-- **[Actions/Typescript-Action](actions/typescript-action)**
+- **[actions/typescript-action](actions/typescript-action)**

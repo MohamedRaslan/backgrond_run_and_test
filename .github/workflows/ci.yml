@@ -69,7 +69,6 @@ jobs:
         uses: ./
         with:
           start: yarn fake-servers
-          wait-on:
-            'http://localhost:4001, http://localhost:4002, http://localhost:4003'
+          wait-on: 'http://localhost:4001,http://localhost:4002,http://localhost:4003'
           wait-on-timeout: 10
           command: yarn lint
