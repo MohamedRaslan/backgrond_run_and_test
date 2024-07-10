@@ -1,7 +1,13 @@
-[![GitHub Super-Linter](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
-![CI](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/ci.yml/badge.svg)
-[![Check dist/](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/check-dist.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/check-dist.yml)
+[![Lint Codebase](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/linter.yml)
+
+[![Dependabot Updates](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/dependabot/dependabot-updates)
+
+[![Continuous Integration](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/ci.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/ci.yml)
+
+[![Check Transpiled JavaScript](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/check-dist.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/check-dist.yml)
+
 [![CodeQL](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/MohamedRaslan/backgrond_run_and_test/actions/workflows/codeql-analysis.yml)
+
 [![GitHub stars](https://img.shields.io/github/stars/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/network)
 [![GitHub issues](https://img.shields.io/github/issues/MohamedRaslan/backgrond_run_and_test)](https://github.com/MohamedRaslan/backgrond_run_and_test/issues)

@@ -8,7 +8,7 @@ const debug = Debug('backgrond_run_and_test')
  **/
 export const ping = async (
   resource: string | string[],
-  timeout: number,
+  timeout = 10000, // wait for 10sec
   expectedStatus = 200,
   isInsecure = true,
   isLogging = true
